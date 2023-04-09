@@ -5,24 +5,25 @@ document.querySelectorAll('.image-option').forEach((item) => {
         const frames = document.querySelectorAll('.frame');
         frames.forEach((frame) => {
             frame.style.backgroundImage = `url('${selectedImage}')`;
-            frame.style.backgroundImage = `url('${selectedImage}')`;
-            frame.style.backgroundSize = 'cover';
+            frame.style.backgroundSize = 'cover'; // Change this line to 'contain' to fit the image into the frame
             frame.style.backgroundPosition = 'center';
+            frame.style.backgroundRepeat = 'y-repeat';
         });
     });
 });
 
 // Update frame dimensions based on user input
 document.getElementById('update-dimensions').addEventListener('click', () => {
-    const leftWidth = document.getElementById('left-width').value;
-    const topHeight = document.getElementById('top-height').value;
-    const centerWidth = document.getElementById('center-width').value;
-    const centerHeight = document.getElementById('center-height').value;
-    const rightWidth = document.getElementById('right-width').value;
+    const frameSelector = document.getElementById('frame-selector').value;
+    const widthInput = document.getElementById('width-input').value;
+    const heightInput = document.getElementById('height-input').value;
 
-    document.getElementById('left').style.width = leftWidth + 'px';
-    document.getElementById('top').style.height = topHeight + 'px';
-    document.getElementById('center').style.width = centerWidth + 'px';
-    document.getElementById('center').style.height = centerHeight + 'px';
-    document.getElementById('right').style.width = rightWidth + 'px';
+    if (frameSelector === 'left' || frameSelector === 'right') {
+        document.getElementById(frameSelector).style.width = widthInput + 'px';
+    } else if (frameSelector === 'top') {
+        document.getElementById(frameSelector).style.height = heightInput + 'px';
+    } else if (frameSelector === 'center') {
+        document.getElementById(frameSelector).style.width = widthInput + 'px';
+        document.getElementById(frameSelector).style.height = heightInput + 'px';
+    }
 });

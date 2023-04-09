@@ -25,23 +25,24 @@
 }
 
 .frame {
-    border: 10px solid red;
+    border: 10px solid blue;
     margin: 1px;
 }
 
-#left, #right {
-    height: 300px;
-    width: 50px;
-}
-
-#top, #center {
-    width: 300px;
-}
-
 #top {
-    height: 50px;
+    height: 40px;
+	width: 324px;
+}
+
+#left, #right {
+    height: 400px;
+    width: 40px;
 }
 
 #center {
-    height: 250px;
+    width: 200px;
+	height: 400px;
 }
+
+
+
