@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Image Frame App</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header>
+      <h1>My Image Frame App</h1>
+    </header>
+    <section>
+      <form>
+        <input type="file" id="image-file" accept="image/*" onchange="loadImage(event)" />
+      </form>
+      <div class="frame-options">
+        <label>
+          <input type="radio" name="frame-type" value="1" onchange="changeFrame()" checked>
+          Frame 1
+        </label>
+        <label>
+          <input type="radio" name="frame-type" value="2" onchange="changeFrame()">
+          Frame 2
+        </label>
+        <label>
+          <input type="radio" name="frame-type" value="3" onchange="changeFrame()">
+          Frame 3
+        </label>
+        <label>
+          <input type="radio" name="frame-type" value="4" onchange="changeFrame()">
+          Frame 4
+        </label>
+        <label>
+          <input type="radio" name="frame-type" value="5" onchange="changeFrame()">
+          Frame 5
+        </label>
+      </div>
+      <svg id="image-frame" viewBox="0 0 300 300">
+        <image id="image" width="300" height="300" preserveAspectRatio="xMidYMid slice" />
+        <rect id="frame-1" x="0" y="0" width="100%" height="100%" stroke="black" stroke-width="10" fill="none" />
+        <rect id="frame-2" x="25" y="25" width="250" height="250" stroke="red" stroke-width="10" fill="none" />
+        <rect id="frame-3" x="50" y="50" width="200" height="200" stroke="green" stroke-width="10" fill="none" />
+        <circle id="frame-4" cx="150" cy="150" r="130" stroke="blue" stroke-width="10" fill="none" />
+        <circle id="frame-5" cx="150" cy="150" r="100" stroke="olive" stroke-width="10" fill="none" />
+      </svg>
+    </section>
+    <script src="app.js"></script>
+  </body>
+</html>
