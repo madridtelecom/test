@@ -1,41 +1,47 @@
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
+.image-selector {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
-header {
-  background-color: #333;
-  color: #fff;
-  padding: 20px;
+.image-option {
+    cursor: pointer;
 }
 
-h1 {
-  margin: 0;
+.image-option img {
+    width: 100px;
+    height: auto;
 }
 
-section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 20px;
+#door {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
 }
 
-form {
-  margin-bottom: 20px;
+.frame-row {
+    display: flex;
 }
 
-svg {
-  display: block;
-  margin: 0 auto;
-  border: 1px solid black;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  width: 300px;
-  height: 300px;
+.frame {
+    border: 10px solid red;
+    margin: 1px;
 }
 
-#image {
-  width: 100%;
-  height: 100%;
+#left, #right {
+    height: 300px;
+    width: 50px;
+}
+
+#top, #center {
+    width: 300px;
+}
+
+#top {
+    height: 50px;
+}
+
+#center {
+    height: 250px;
 }
